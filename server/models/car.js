@@ -24,11 +24,7 @@ const carSchema = new mongoose.Schema({
   city: {
     type: String,
     required: true,
-  },
-  carImageLink: { // New field to store the car image link
-    type: String,
-    required: true,
-  },
+  }
 });
 
 const Car = mongoose.model("Car", carSchema);

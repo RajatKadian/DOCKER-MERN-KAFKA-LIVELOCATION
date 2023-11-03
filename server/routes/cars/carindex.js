@@ -54,15 +54,6 @@ router.get('/allCars', (req, res) => {
 
 router.post('/saveCars', upload.single('carImage'), async (req, res) => {
   const userEmail = req.body.email;
-  const carImage = req.file.path;
-
-  try {
-    // Upload the image to Cloudinary
-    const result = await cloudinary.uploader.upload(carImage, {
-      public_id: userEmail,
-    });
-
-    // Save the Cloudinary image URL in the database
     const data = new Car({
       email: userEmail,
       carName: req.body.carName,
@@ -70,16 +61,13 @@ router.post('/saveCars', upload.single('carImage'), async (req, res) => {
       available: req.body.available,
       DropDate: req.body.DropDate,
       city: req.body.city,
-      carImageLink: result.secure_url, // Save the Cloudinary image URL
+  
     });
 
     await data.save();
     res.json(data);
-  } catch (error) {
-    console.error(error);
-    res.status(500).send('Error inserting data');
-  }
-});
+  } 
+);
 
 // Endpoint to serve the car image from Cloudinary
 router.get('/carImage/:email', (req, res) => {

@@ -117,6 +117,7 @@
     box-sizing: border-box;
     background-color: #f2f2f2;
     transition: transform 0.3s ease-in-out; /* Add transition effect */
+    
   }
   
   .card:hover {
@@ -124,7 +125,8 @@
   }
   
   .card-image {
-    width: 100%;
+    width: 500px;
+    height: 300px;
     height: auto;
     object-fit: cover;
   }

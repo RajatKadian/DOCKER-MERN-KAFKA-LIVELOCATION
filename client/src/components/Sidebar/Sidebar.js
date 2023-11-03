@@ -5,19 +5,19 @@ import { useNavigate } from 'react-router-dom';
 import './Sidebar.css';
 
 export const Sidebar = () => {
-  const { isLoggedIn, logout } = useContext(AuthContext);
-  const navigate = useNavigate();
+  // const { isLoggedIn, logout } = useContext(AuthContext);
+  // const navigate = useNavigate();
 
-  useEffect(() => {
-      if (!isLoggedIn) {
-        console.log("Not logged in");
-        // Redirect the user to the login page
-        navigate('/login');
-      }
-    }, [isLoggedIn, navigate]);
+  // useEffect(() => {
+  //     if (!isLoggedIn) {
+  //       console.log("Not logged in");
+  //       // Redirect the user to the login page
+  //       navigate('/login');
+  //     }
+  //   }, [isLoggedIn, navigate]);
   
   return (
-<div class="col-2 bg-dark sidebar" style={{ height: '100vh' }}>
+<div class="col-2 bg-dark sidebar" style={{ height: '800vh' }}>
   <h1>Navigate</h1>
   <ul class="nav flex-column">
     <li class="nav-item">
@@ -31,11 +31,11 @@ export const Sidebar = () => {
       </a>
     </li>
   </ul>
-  <div class="button-wrapper">
+  {/* <div class="button-wrapper">
     <button type="logout" class="btn btn-primary" onClick={logout}>
       Logout
     </button>
-  </div>
+  </div> */}
 </div>
 
   );

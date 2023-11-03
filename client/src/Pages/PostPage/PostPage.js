@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { Sidebar } from '../../components/Sidebar/Sidebar';
-import { RentalCabForm } from '../../components/RentalCabForm/RentalCabForm';
+import RentalCabForm from '../../components/RentalCabForm/RentalCabForm';
+
 
 export const RentOutPage = () => {
     
@@ -19,3 +20,4 @@ export const RentOutPage = () => {
     </div>
     );
 }
+

@@ -1,0 +1,36 @@
+version: '3'
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000" # Map the container's port to the host machine
+    volumes:
+      - ./client:/app # Mount the local React app code directory to the container
+    environment:
+      - NODE_ENV=production # Set the Node.js environment as needed
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081" # Map the container's port to the host machine
+    volumes:
+      - ./server:/server # Mount the local server code directory to the container
+
+
+
+# version: '3'
+# services:
+#   client:
+#     build:
+#       context: ./client
+#       dockerfile: Dockerfile
+#     ports:
+#       - "3000:3000" # Map the container's port to the host machine
+#     volumes:
+#       - ./client:/app # Mount the local code directory to the container
+#     environment:
+#       - NODE_ENV=production # Set the Node.js environment as needed
