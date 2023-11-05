@@ -44,6 +44,12 @@ confluentinc/cp-kafka
 
 3. node consumer.js user-1
 
-4. node producer.js
+   ![image](https://github.com/RajatKadian/DOCKER-MERN-KAFKA-LIVELOCATION/assets/55406990/943be40d-56ce-42c7-8f7d-7bdadd0870c6)
+
+
+5. node producer.js
 
    (you get a prompt enter name and location for the car rider i.e. north or south )
+
+   ![image](https://github.com/RajatKadian/DOCKER-MERN-KAFKA-LIVELOCATION/assets/55406990/705fceeb-212f-4dd7-bc2c-c85decbd783f)
+
