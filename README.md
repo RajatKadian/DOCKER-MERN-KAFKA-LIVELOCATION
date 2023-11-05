@@ -15,6 +15,11 @@
 3. Start the container
    docker-compose up
 
+   ![image](https://github.com/RajatKadian/DOCKER-MERN-KAFKA-LIVELOCATION/assets/55406990/aa6f4b4b-06b9-457b-9efb-8fc7e8a2e41c)
+
+   
+
+
 
 
 ### Start Kafka
