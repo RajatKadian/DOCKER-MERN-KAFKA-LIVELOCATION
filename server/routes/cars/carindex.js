@@ -76,4 +76,50 @@ router.get('/carImage/:email', (req, res) => {
   res.redirect(imageUrl);
 });
 
+
+/////
+
+router.put('/editCar/:id', async (req, res) => {
+  const carId = req.params.id;
+  const updatedData = {
+    carName: req.body.carName,
+    desc: req.body.desc,
+    available: req.body.available,
+    DropDate: req.body.DropDate,
+    city: req.body.city,
+  };
+
+  try {
+    const updatedCar = await Car.findByIdAndUpdate(carId, updatedData, { new: true });
+    if (!updatedCar) {
+      return res.status(404).json({ message: 'Car not found' });
+    }
+    res.json(updatedCar);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error updating car');
+  }
+});
+
+
+
+////////
+
+router.delete('/deleteCar/:id', async (req, res) => {
+  const carId = req.params.id;
+
+  try {
+    const deletedCar = await Car.findByIdAndDelete(carId);
+    if (!deletedCar) {
+      return res.status(404).json({ message: 'Car not found' });
+    }
+    res.json(deletedCar);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Error deleting car');
+  }
+});
+
+
+
 module.exports = router;

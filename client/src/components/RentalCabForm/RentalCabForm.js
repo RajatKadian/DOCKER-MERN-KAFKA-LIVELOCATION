@@ -7,22 +7,39 @@ import axios from "axios";
 
 const formStyle = {
   maxWidth: "60%",
-  margin: "5%",
+  margin: "0 auto", // Center horizontally
   padding: "20px",
-  border: "2px solid #ccc",
+  border: "4px solid #ccc",
   borderRadius: "15px",
   backgroundColor: "#f9f9f9",
+  display: "flex",         // Use flex display
+  flexDirection: "column", // Stack children vertically
+  alignItems: "center",    // Center horizontally within the container
+  justifyContent: "center", // Center vertically within the container
+  minHeight: "80vh",      // Ensure the form covers the full viewport height
 };
+
 
 const labelStyle = {
   fontWeight: "bold",
+};
+
+
+const pageStyle = {
+  backgroundColor: "#e8e6eb",  // Set the background color to light pink
+  minHeight: "100vh",          // Ensure the page covers the full viewport height
 };
 
 const buttonStyle = {
   backgroundColor: "#007bff",
   color: "white",
   border: "none",
+};
 
+const h1Style = {
+  textAlign: "center",
+  padding: "10px",
+  borderRadius: "15px",
 };
 
 const RentalCabForm = () => {
@@ -72,8 +89,12 @@ const RentalCabForm = () => {
   };
 
   return (
-    <div>
-    <h1><strong>BECOME A HOST</strong></h1>
+    <div style={pageStyle}>
+      <div style={h1Style}>
+        <h1>
+          <strong>BECOME A HOST</strong>
+        </h1>
+      </div>
       <Form style={formStyle} onSubmit={handleSubmit}>
         <Form.Group controlId="email">
           <Form.Label style={labelStyle}>Email</Form.Label>
@@ -144,3 +165,7 @@ const RentalCabForm = () => {
 };
 
 export default RentalCabForm;
+
+
+
+
