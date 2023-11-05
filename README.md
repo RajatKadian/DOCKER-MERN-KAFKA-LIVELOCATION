@@ -2,7 +2,7 @@
 
 ## How to use
 1. Clone the repo
-    `git clone https://github.com/CSIS-3380-001/final-project](https://github.com/RajatKadian/DOCKER-MERN-KAFKA-LIVELOCATION.git`
+    `git clone https://github.com/RajatKadian/DOCKER-MERN-KAFKA-LIVELOCATION.git`
 
 ### START CONTAINER
 
